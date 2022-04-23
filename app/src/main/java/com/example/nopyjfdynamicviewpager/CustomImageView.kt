@@ -11,7 +11,7 @@ class CustomImageView(
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         val width = MeasureSpec.getSize(widthMeasureSpec)
-        val height = width / 2
-        setMeasuredDimension(width, height)
+        val height = width / 3.2
+        setMeasuredDimension(width, height.toInt())
     }
 }
