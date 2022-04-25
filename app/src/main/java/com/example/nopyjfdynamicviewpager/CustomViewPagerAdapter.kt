@@ -16,6 +16,7 @@ class CustomViewPagerAdapter<T>(
 
     fun setData(data: List<T>) {
         this.data = data
+        notifyDataSetChanged()
     }
 
     override fun getCount(): Int {
@@ -39,7 +40,7 @@ class CustomViewPagerAdapter<T>(
 
         if (data.isNotEmpty()) {
             val item = data[position]
-            itemBinding.ivItem.setRatio(1F)
+            itemBinding.ivItem.setRatio(3.2F)
             Glide.with(context).load(item).into(itemBinding.ivItem)
         }
 
