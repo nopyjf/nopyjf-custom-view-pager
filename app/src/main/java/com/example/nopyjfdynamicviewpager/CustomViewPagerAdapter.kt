@@ -39,6 +39,7 @@ class CustomViewPagerAdapter<T>(
 
         if (data.isNotEmpty()) {
             val item = data[position]
+            itemBinding.ivItem.setRatio(1F)
             Glide.with(context).load(item).into(itemBinding.ivItem)
         }
 
